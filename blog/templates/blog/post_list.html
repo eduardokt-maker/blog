@@ -1,13 +1,18 @@
-<html>
-    <head>
-        <title>Blog </title>
-    </head>
+{% extends 'base.html' %}
 
+{% block title %} Blog do Eduardo {% endblock %}
+
+{% block main %}
    {% for post in poste %}
      <p>publics post: {{ post.data_publicação }}</p>
      <h2><a href="">{{ post.titulo }}</a></h2>
      <p>{{ post.texto|linebreaksbr }}</p>
 
    {% endfor %}
-<a href="{% url 'add_post' %}">Novo</a>
-</html>
+   <a href="{% url 'add_post' %}">Novo</a>
+
+
+{% endblock %}
+
+
+
