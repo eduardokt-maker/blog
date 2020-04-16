@@ -10,6 +10,7 @@ class Postagem(models.Model):
     texto = models.TextField()
     data_criacao = models.DateTimeField(default=timezone.now)
     data_publicacao = models.DateTimeField(blank=True, null=True)
+    bio = models.ImageField(upload_to='media/', null=True)
 
     def publicacao(self):
         self.data_publicacao = timezone.now()
