@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from .models import Postagem
 from django.views.generic.edit import CreateView
 from django.utils import timezone

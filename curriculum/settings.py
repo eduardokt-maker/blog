@@ -25,7 +25,7 @@ SECRET_KEY = '57q70mz1^rrzo==+8t4182xd076o87l#6(tid3fr-tl%-q3bqa'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'bootstrapform',
+
 ]
 
 MIDDLEWARE = [
@@ -55,7 +57,7 @@ ROOT_URLCONF = 'curriculum.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,4 +121,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+LOGIN_URL = '/login/'
+
+LOGIN_REDIRECT_URL = 'post_list'
