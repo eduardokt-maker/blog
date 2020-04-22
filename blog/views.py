@@ -3,6 +3,8 @@ from .models import Postagem
 from django.views.generic.edit import CreateView
 from django.utils import timezone
 from django.urls import reverse_lazy
+from django.contrib.auth.decorators import login_required
+
 
 
 # Create your views here.
@@ -13,10 +15,13 @@ def post_list(request):
 
     # return render(request, 'blog/post_list.html', {})
 
+
+
 class PostagemCreate(CreateView):
     model = Postagem
     fields = ['autor', 'titulo', 'texto', 'data_criacao', 'data_publicacao']
     success_url = reverse_lazy('post_list')
+
 
 
 
