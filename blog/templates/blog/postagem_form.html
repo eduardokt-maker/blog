@@ -4,11 +4,25 @@
 {% block title %} Cadastro Postagem {% endblock %}
 
 {% block main %}
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+        </div>
 
-<form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Save">
-</form>
+      <div class="col-sm">
+          <div class="jumbotron">
+                <form method="post" enctype="multipart/form-data">
+                 {% csrf_token %}
+                 {{ form|bootstrap }}
+                <input type="submit" value="Save">
+                </form>
+          </div>
+      </div>
+
+      <div class="col-sm">
+      </div>
+
+      </div>
+    </div>
 
 {% endblock %}
