@@ -1,0 +1,9 @@
+
+
+<h1>Pessoal</h1>
+<ul>
+    {% for pessoas in object_list %}
+        <br>
+       <li>{{ pessoas.nome|upper }}</li>
+    {% endfor %}
+</ul>
