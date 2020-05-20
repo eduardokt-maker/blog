@@ -11,7 +11,7 @@ class Pessoas(models.Model):
         ('V', 'Viuvo(a)')
     ]
 
-    codigo = models.CharField(max_length=5, primary_key=True)
+    codigo = models.AutoField(primary_key=True)
     nome = models.CharField(max_length=50)
     rg = models.CharField(max_length=10, null=True, blank=True)
     expedidor= models.CharField(max_length=12, null=True, blank=True)

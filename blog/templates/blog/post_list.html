@@ -1,16 +1,16 @@
 {% extends 'base.html' %}
 
-{% block title %} Blog do Eduardo {% endblock %}
+{% block title %} Gestão Comercial {% endblock %}
 
 {% block main %}
- <a href="{% url 'add_post' %}" class="btn btn-primary">Add Post</a>
+ <a href="{% url 'add_post' %}" class="btn btn-primary">Fazer Pedido</a>
  <a href="{% url 'add_person' %}" class="btn btn-primary">Cadastro Pessoal</a>
  <a href="{% url 'list_person' %}" class="btn btn-primary">List Pessoal</a>
 
    {% for post in poste %}
-     <p>publics post: {{ post.data_publicação }}</p>
-     <h2><a href="">{{ post.titulo }}</a></h2>
-     <p>{{ post.texto|linebreaksbr }}</p>
+     <p>publics post: {{ post.data_pedido }}</p>
+     <h2><a href="">{{ post.Produto }}</a></h2>
+     <p>{{ post.observacao|linebreaksbr }}</p>
 
    {% endfor %}
 
